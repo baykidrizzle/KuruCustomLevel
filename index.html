@@ -7,9 +7,10 @@
     <p><a href="unitydl://mylink">Launch</a></p>
     <p><a href="unitydl://mylink?parameter">Launch with Parameter</a></p>
 
-    <p id="root"></p>
+    <a><p id="root"></p></a>
     <script>
-        document.getElementById("root").innerHTML = "The full URL of this page is:<br>" + window.location.href;
+        var justLevelInfo = window.location.href.split("?");
+        document.getElementById("root").innerHTML = "kuru://level?" + justLevelInfo;
     </script>
 </body>
 </html>
