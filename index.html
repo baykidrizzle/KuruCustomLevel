@@ -5,12 +5,13 @@
 <body>
     <h1>My Deep Link Test page</h1>
     <p><a href="unitydl://mylink">Launch</a></p>
-    <p><a id = "root" href = id>Launch with Parameter</a></p>
-
-   
     <script>
         var justLevelInfo = window.location.href.split("?")[1];
         document.getElementById("root").innerHTML = "kuru://level?" + justLevelInfo;
     </script>
+    <p><a id="root">Launch with Parameter</a></p>
+
+
+
 </body>
 </html>
