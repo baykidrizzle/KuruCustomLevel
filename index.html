@@ -4,12 +4,15 @@
 </head>
 <body>
     <h1>My Deep Link Test page</h1>
-    <p><a href="unitydl://mylink">Launch</a></p>
+    <p><button onclick="goToLevel()">Launch</button></p>
     <script>
-        var justLevelInfo = window.location.href.split("?")[1];
-        document.getElementById("levelurl").innerHTML = justLevelInfo;
+        function goToLevel() {
+            var justLevelInfo = window.location.href.split("?")[1];
+            //document.getElementById("levelurl").innerHTML = "kuru://level?" + justLevelInfo;
+            window.location.href = "kuru://level?" + justLevelInfo;
+        }
     </script>
-    <p><a href= "kuru://level? + #levelurl">Launch with Parameter</a></p>
+   
 
 
 
