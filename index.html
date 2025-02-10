@@ -6,6 +6,9 @@
     <h1>My Deep Link Test page</h1>
     <p><button onclick="goToLevel()">Launch</button></p>
     <script>
+        var justLevelInfo = window.location.href.split("?")[1];
+        //document.getElementById("levelurl").innerHTML = "kuru://level?" + justLevelInfo;
+        window.location.href = "kuru://level?" + justLevelInfo;
         function goToLevel() {
             var justLevelInfo = window.location.href.split("?")[1];
             //document.getElementById("levelurl").innerHTML = "kuru://level?" + justLevelInfo;
