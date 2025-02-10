@@ -7,26 +7,14 @@
     <script>
         var justLevelInfo = window.location.href.split("?")[1];
         //document.getElementById("levelurl").innerHTML = "kuru://level?" + justLevelInfo;
-        if (!isValidURL(window.location.href = "kuru://level?" + justLevelInfo)) {
-            redirect();
-           
-           
-        }
         window.location.href = "kuru://level?" + justLevelInfo;
-        
-            
-       
+        setTimeout(redirect, 10000)
         function goToLevel() {
             var justLevelInfo = window.location.href.split("?")[1];
             //document.getElementById("levelurl").innerHTML = "kuru://level?" + justLevelInfo;
             window.location.href = "kuru://level?" + justLevelInfo;
         }
-        function isValidURL(url) {
-            const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
-            return urlPattern.test(url);
-        }
         function redirect() {
-
             window.location.href = "https://www.solbreakstudios.org/games";
         }
     </script>
